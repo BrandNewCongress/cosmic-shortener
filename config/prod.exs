@@ -16,6 +16,10 @@ config :shorten, Shorten.Endpoint,
   url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/manifest.json"
 
+config :shorten, Shorten.Endpoint,
+  server: true,
+  secret_key_base: "${SECRET_KEY_BASE}"
+
 # Do not print debug messages in production
 config :logger, level: :info
 

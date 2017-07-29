@@ -33,6 +33,7 @@ defmodule Shorten.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:httpotion, "~> 3.0.2"},
-     {:stash, "~> 1.0.0"}]
+     {:stash, "~> 1.0.0"},
+     {:distillery, "~> 1.0.0"}]
   end
 end
