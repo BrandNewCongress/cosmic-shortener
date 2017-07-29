@@ -34,6 +34,6 @@ defmodule Shorten.Mixfile do
      {:cowboy, "~> 1.0"},
      {:httpotion, "~> 3.0.2"},
      {:stash, "~> 1.0.0"},
-     {:distillery, "~> 1.0.0"}]
+     {:distillery, "~> 1.4", runtime: false}]
   end
 end
