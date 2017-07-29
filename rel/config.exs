@@ -31,7 +31,7 @@ end
 # will be used by default
 
 release :shortener do
-  set applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :httpotion]
+  set applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :httpotion, :stash]
 end
 
 release :shorten do
