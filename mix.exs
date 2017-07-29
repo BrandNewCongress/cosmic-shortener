@@ -17,7 +17,7 @@ defmodule Shorten.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Shorten, []},
-     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :httpotion]]
+     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext, :httpotion, :stash]]
   end
 
   # Specifies which paths to compile per environment.
