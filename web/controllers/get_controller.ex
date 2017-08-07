@@ -2,7 +2,7 @@ defmodule Shorten.GetController do
   use Shorten.Web, :controller
 
   def get(conn = %{request_path: path}, _params) do
-    %{"metadata" => %{"route" => route}} = Cosmic.get("bnc-routes")
+    %{"metadata" => %{"route" => route}} = Cosmic.get("jd-routes")
 
     tuple_or_nil =
       route
@@ -12,7 +12,7 @@ defmodule Shorten.GetController do
 
     destination =
       case tuple_or_nil do
-        nil -> "https://brandnewcongress.org"
+        nil -> "https://justicedemocrats.com"
         {_, destination} -> destination
       end
 
