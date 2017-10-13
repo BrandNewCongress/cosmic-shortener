@@ -3,6 +3,7 @@ defmodule Shorten.GetController do
 
   def get(conn = %{request_path: path}, _params) do
     %{"metadata" => %{"route" => route}} = Cosmic.get("jd-routes")
+    path = String.downcase(path)
 
     tuple_or_nil =
       route
@@ -24,7 +25,7 @@ defmodule Shorten.GetController do
   end
 
   defp prepare(%{"from" => from_regex, "to" => to_url}) do
-    {:ok, from} = Regex.compile(from_regex)
+    {:ok, from} = from_regex |> String.downcase() |> Regex.compile()
     {from, to_url}
   end
 end
